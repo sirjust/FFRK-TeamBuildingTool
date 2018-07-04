@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FFRK_DatabaseModelStoreContainer" CdmEntityContainer="FFRK_DatabaseEntities">
+    <EntitySetMapping Name="FFRK_Data">
+      <EntityTypeMapping TypeName="FFRK_DatabaseModel.FFRK_Data">
+        <MappingFragment StoreEntitySet="FFRK_Data">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Iteration" ColumnName="Iteration" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ElementType" ColumnName="ElementType" />
+          <ScalarProperty Name="EnElement" ColumnName="EnElement" />
+          <ScalarProperty Name="SBType" ColumnName="SBType" />
+          <ScalarProperty Name="Level99" ColumnName="Level99" />
+          <ScalarProperty Name="Dived" ColumnName="Dived" />
+          <ScalarProperty Name="ExtraInfo" ColumnName="ExtraInfo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -5,15 +5,32 @@
 <div class="jumbotron">
     <h1>FFRK Team Building Tool</h1>
 </div>
+<body>
+    <p>First you need to import your excel spreadsheet.</p>
+    @using (Html.BeginForm("Import", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.Raw(ViewBag.Error)
+        <span>Excel File</span><input type="file" name="excelfile" />
+        <br />
+        <input type="submit" value="Import" />
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2></h2>
-        <p>This page will display all your FFRK characters who have Soul Breaks for the selected Element</p>
-        <p>The prerequisite is an excel spreadsheet with your characters' info</p>
+    @using (Html.BeginForm("ToDatabase", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.Raw(ViewBag.Error)
+        <span>Excel File</span><input type="file" name="excelfile" />
+        <br />
+        <input type="submit" value="ToDatabase" />
+    }
+    <div class="row">
+        <div class="col-md-4">
+            <h2></h2>
+            <p>This application will display all your FFRK characters who have Soul Breaks for the selected Element</p>
+            <p>The prerequisite is an excel spreadsheet with your characters' info</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Choose your element from the dropdown menu!</h2>
+            <input class="button" name="element" />
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Choose your element from the dropdown menu!</h2>
-        <input class="button" name="element"/>
-    </div>
-</div>
+</body>

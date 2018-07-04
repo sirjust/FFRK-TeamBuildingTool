@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FFRK_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FFRK_Data">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" />
+          <Property Name="Iteration" Type="varchar" MaxLength="30" />
+          <Property Name="Type" Type="varchar" MaxLength="30" />
+          <Property Name="ElementType" Type="varchar" MaxLength="30" />
+          <Property Name="EnElement" Type="varchar" MaxLength="30" />
+          <Property Name="SBType" Type="varchar" MaxLength="30" />
+          <Property Name="Level99" Type="varchar" MaxLength="20" />
+          <Property Name="Dived" Type="varchar" MaxLength="20" />
+          <Property Name="ExtraInfo" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityContainer Name="FFRK_DatabaseModelStoreContainer">
+          <EntitySet Name="FFRK_Data" EntityType="Self.FFRK_Data" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FFRK_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FFRK_Data">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Iteration" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ElementType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EnElement" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SBType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Level99" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Dived" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ExtraInfo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="FFRK_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FFRK_Data" EntityType="Self.FFRK_Data" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FFRK_DatabaseModelStoreContainer" CdmEntityContainer="FFRK_DatabaseEntities">
+          <EntitySetMapping Name="FFRK_Data">
+            <EntityTypeMapping TypeName="FFRK_DatabaseModel.FFRK_Data">
+              <MappingFragment StoreEntitySet="FFRK_Data">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Iteration" ColumnName="Iteration" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ElementType" ColumnName="ElementType" />
+                <ScalarProperty Name="EnElement" ColumnName="EnElement" />
+                <ScalarProperty Name="SBType" ColumnName="SBType" />
+                <ScalarProperty Name="Level99" ColumnName="Level99" />
+                <ScalarProperty Name="Dived" ColumnName="Dived" />
+                <ScalarProperty Name="ExtraInfo" ColumnName="ExtraInfo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

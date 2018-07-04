@@ -1,9 +1,43 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@using FFRK_Element_Info.ViewModels;
+@model List<AllCharactersVm>
+@{
+    ViewBag.Title = "SeeAll";
 }
 
 <div class="jumbotron">
     <h1>FFRK Team Building Tool</h1>
 </div>
+<body>
+    <h2>Character List</h2>
+    <table cellpadding="1" cellspacing="2" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Iteration</th>
+        <th>Type</th>
+        <th>ElementType</th>
+        <th>EnElement</th>
+        <th>SBType</th>
+        <th>Level99</th>
+        <th>Dived</th>
+        <th>ExtraInfo</th>
+    </tr>
+        @foreach(var character in Model)
+        {
+    <tr>
+        <td>@character.Id</td>
+        <td>@character.Name</td>
+        <td>@character.Iteration</td>
+        <td>@character.Type</td>
+        <td>@character.ElementType</td>
+        <td>@character.EnElement</td>
+        <td>@character.SBType</td>
+        <td>@character.Level99</td>
+        <td>@character.Dived</td>
+        <td>@character.ExtraInfo</td>
+    </tr>
+        }
+    </table>
+</body>
 
 <p>This is where the complete spreadsheet will go.</p>

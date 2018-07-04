@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FFRK_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FFRK_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Iteration" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ElementType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="EnElement" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SBType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Level99" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Dived" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ExtraInfo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FFRK_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FFRK_Data" EntityType="Self.FFRK_Data" />
+  </EntityContainer>
+</Schema>

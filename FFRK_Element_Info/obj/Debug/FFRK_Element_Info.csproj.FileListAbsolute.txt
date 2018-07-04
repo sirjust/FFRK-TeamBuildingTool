@@ -91,3 +91,12 @@ C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\obj\Debug\FFRK
 C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\obj\Debug\FFRK_Element_Info.csproj.CopyComplete
 C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\obj\Debug\FFRK_Element_Info.dll
 C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\obj\Debug\FFRK_Element_Info.pdb
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\EntityFramework.dll
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\EntityFramework.SqlServer.dll
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\LinqToExcel.dll
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\Remotion.Data.Linq.dll
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\Remotion.dll
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\Remotion.Interfaces.dll
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\EntityFramework.xml
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\EntityFramework.SqlServer.xml
+C:\Users\SirJUST\source\repos\FFRK_Element_Info\FFRK_Element_Info\bin\LinqToExcel.xml
