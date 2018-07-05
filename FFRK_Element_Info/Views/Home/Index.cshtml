@@ -7,14 +7,6 @@
 </div>
 <body>
     <p>First you need to import your excel spreadsheet.</p>
-    @using (Html.BeginForm("Import", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        @Html.Raw(ViewBag.Error)
-        <span>Excel File</span><input type="file" name="excelfile" />
-        <br />
-        <input type="submit" value="Import" />
-    }
-
     @using (Html.BeginForm("ToDatabase", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.Raw(ViewBag.Error)
@@ -29,8 +21,23 @@
             <p>The prerequisite is an excel spreadsheet with your characters' info</p>
         </div>
         <div class="col-md-4">
-            <h2>Choose your element from the dropdown menu!</h2>
-            <input class="button" name="element" />
-        </div>
+            @using (Html.BeginForm("ElementChoice", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.Raw(ViewBag.Error)
+                <h2>Choose your element from the list of buttons!</h2>
+                <div class="form-check text-center col-8">
+                    <input name="Element" type="radio" class="form-check-input" value="Holy">Holy<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Dark">Dark<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Fire">Fire<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Ice">Ice<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Wind">Wind<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Earth">Earth<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Lightning">Lightning<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Water">Water<br/>
+                    <input name="Element" type="radio" class="form-check-input" value="Poison">Poison<br/>
+                </div>
+                <input type="submit" class="button" name="sendQuery" />
+            }
+            </div>
     </div>
 </body>

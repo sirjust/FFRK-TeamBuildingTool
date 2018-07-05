@@ -1,0 +1,27 @@
+﻿@using FFRK_Element_Info.ViewModels;
+@model List<BoostDisplayVm>
+@{
+    ViewBag.Title = "BoostView";
+}
+
+<div class="jumbotron">
+    <h1>FFRK Team Building Tool</h1>
+</div>
+<body>
+    <h2>Character List</h2>
+    <table cellpadding="1" cellspacing="2" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Iteration</th>
+        <th>ExtraInfo</th>
+    </tr>
+        @foreach(var character in Model)
+        {
+    <tr>
+        <td>@character.Name</td>
+        <td>@character.Iteration</td>
+        <td>@character.ExtraInfo</td>
+    </tr>
+        }
+    </table>
+</body>

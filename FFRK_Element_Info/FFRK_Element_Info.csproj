@@ -197,6 +197,8 @@
     <Compile Include="Models\Character.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AllCharactersVm.cs" />
+    <Compile Include="ViewModels\BoostDisplayVm.cs" />
+    <Compile Include="ViewModels\ElementDisplayVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\FFRK_Database.mdf" />
@@ -232,6 +234,7 @@
     </EntityDeploy>
     <Content Include="FFRK_DataModel.edmx.diagram">
       <DependentUpon>FFRK_DataModel.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -261,6 +264,8 @@
     <Content Include="Views\Home\SeeAll.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
+    <Content Include="Views\Home\ElementView.cshtml" />
+    <Content Include="Views\Home\BoostView.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

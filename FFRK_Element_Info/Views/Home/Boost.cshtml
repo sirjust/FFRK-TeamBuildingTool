@@ -9,11 +9,26 @@
 <div class="row">
     <div class="col-md-4">
         <h2></h2>
-        <p>This page will display all your FFRK characters who have Soul Breaks for the selected Element</p>
+        <p>This page will display all your FFRK characters who have the selected boost</p>
         <p>The prerequisite is an excel spreadsheet with your characters' info</p>
     </div>
     <div class="col-md-4">
-        <h2>Choose your boost from the dropdown menu!</h2>
-        <input class="button" name="boost" />
-    </div>
+        @using (Html.BeginForm("BoostChoice", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.Raw(ViewBag.Error)
+            <h2>Choose your boost from the dropdown menu!</h2>
+            <div class="form-check text-center col-8">
+                <input name="Boost" type="radio" class="form-check-input" value="Attack">Attack<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Magic">Magic<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Mind">Mind<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Resist">Resist<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Wall">Wall<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Last Stand">Last Stand<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Radiant Shield">Radiant Shield<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Damage Shield">Damage Shield<br />
+                <input name="Boost" type="radio" class="form-check-input" value="Haste">Haste<br />
+            </div>
+            <input type="submit" class="button" name="sendQuery1" />
+        }
+        </div>
 </div>
